@@ -1,6 +1,6 @@
 """
 Instagram Account Creator
-Author: @NamasteCoder
+Author: @CoderNamaste
 """
 
 import os
