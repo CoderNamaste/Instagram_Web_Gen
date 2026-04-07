@@ -555,7 +555,7 @@ def main():
 
     print("=" * 60)
     print("Instagram Account Creator")
-    print("Tool Made By @NamasteCoder (Refactored)")
+    print("Tool Made By @CoderNamaste")
     print("=" * 60)
 
     # Initialize the account creator
