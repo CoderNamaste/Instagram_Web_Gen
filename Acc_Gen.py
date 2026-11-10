@@ -3,12 +3,11 @@ Instagram Account Creator
 Author: @CoderNamaste
 """
 
-import os
 import random
 import string
 import time
 import logging
-from typing import Optional, Dict, Tuple, Any
+from typing import Optional, Dict, Tuple
 from dataclasses import dataclass
 from enum import Enum
 
@@ -86,7 +85,7 @@ class InstagramAccountCreator:
 
         # Initialize session with Chrome impersonation
         self.session = curl_requests.Session()
-        self.session.impersonate = 'chrome110'
+        self.session.impersonate = 'chrome152'
 
         # Initialize headers
         self.headers = None
@@ -436,7 +435,8 @@ class InstagramAccountCreator:
         try:
             # Generate account details
             first_name = names.get_first_name()
-            username = self.get_username_suggestion(first_name, email)
+            username = names.get_first_name().lower() + ''.join(random.choices(string.ascii_lowercase + string.digits, k=6))
+            # username = self.get_username_suggestion(first_name, email)
 
             if not username:
                 logger.error("Failed to get username suggestion")
